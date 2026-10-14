@@ -93,23 +93,3 @@ terraform plan           # read the diff: + create, ~ update, -/+ replace
 
 ---
 
-## 🚀 Go Beyond This Sheet
-
-### 📦 Explore the big repo
-The companion repo [**terraform-for-devops**](https://github.com/LondheShubham153/terraform-for-devops) has real, current Terraform for this topic. Clone it and read the code, don't just skim it:
-- [`ec2.tf`](https://github.com/LondheShubham153/terraform-for-devops/blob/main/ec2.tf), [`s3.tf`](https://github.com/LondheShubham153/terraform-for-devops/blob/main/s3.tf), [`dynamodb.tf`](https://github.com/LondheShubham153/terraform-for-devops/blob/main/dynamodb.tf) – real AWS resources
-- [`examples/for_each.tf`](https://github.com/LondheShubham153/terraform-for-devops/blob/main/examples/for_each.tf) – `for_each` and `dynamic` blocks
-- [`examples/lifecycle.tf`](https://github.com/LondheShubham153/terraform-for-devops/blob/main/examples/lifecycle.tf) – lifecycle patterns
-
-More repos: [github.com/LondheShubham153?q=terraform](https://github.com/LondheShubham153?tab=repositories&q=terraform)
-
-### 🧪 Practice on your own
-A cheat sheet only helps once you've typed the commands yourself. Try these without copy-pasting:
-- [ ] Create an S3 bucket and an EC2 instance, then change a tag and an instance type and note which forces a replace.
-- [ ] Turn three copy-pasted resources into one `for_each`.
-- [ ] Look up an AMI with a `data` source instead of hard-coding it.
-- [ ] Add a `lifecycle` block and prove it works.
-
-> 💡 Break things on purpose, read the error, then fix it. That is how it sticks. Run `terraform destroy` when you're done.
-
-⬅️ Back to [Day 3 tasks](./README.md)
