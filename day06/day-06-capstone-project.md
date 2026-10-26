@@ -1,4 +1,4 @@
-# Day 67 -- TerraWeek Capstone: Multi-Environment Infrastructure with Workspaces and Modules
+# Day 6 -- TerraWeek Capstone: Multi-Environment Infrastructure with Workspaces and Modules
 
 ## Task
 Seven days of Terraform -- HCL, providers, resources, dependencies, variables, outputs, data sources, state management, remote backends, custom modules, registry modules, and a full EKS cluster. Today you put it all together in one production-grade project.
