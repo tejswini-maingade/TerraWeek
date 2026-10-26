@@ -1,106 +1,256 @@
+# ☁️ TerraWeek — Terraform Challenge
+
 <p align="center">
-  <img src="https://github.com/LondheShubham153/TerraWeek/blob/main/assets/Terraform_background.jpg" width="850">
+  <strong>Learning Infrastructure as Code with Terraform and AWS</strong>
 </p>
 
-# 🔥 TWS TerraWeek Challenge 2026
+<p align="center">
+  <img src="https://img.shields.io/badge/Terraform-Infrastructure%20as%20Code-7B42BC?logo=terraform&logoColor=white" alt="Terraform"/>
+  <img src="https://img.shields.io/badge/AWS-Cloud%20Computing-FF9900?logo=amazonaws&logoColor=white" alt="AWS"/>
+  <img src="https://img.shields.io/badge/Status-completed-blue" alt="Status"/>
+  <img src="https://img.shields.io/badge/Challenge-TerraWeek-green" alt="TerraWeek"/>
+</p>
 
-> **Are you ready to take the Terraform Challenge?**
-> Learn Terraform, build real Infrastructure as Code, and stay consistent every day. 🌍
+## 👋 About This Repository
 
-Welcome to the **TerraWeek Challenge** by **TrainWithShubham (TWS)** — a **6-day**, hands-on Terraform sprint (plus a wrap-up day) that takes you from zero to building your own cloud infrastructure with Infrastructure as Code (IaC).
+Welcome to my **TerraWeek Terraform Challenge** repository!
 
-Everything here is refreshed for **2026** using the **latest Terraform (v1.15.x)** and **latest provider versions** (AWS provider v6.x and friends). No stale syntax, no deprecated patterns — just modern, production-grade Terraform.
+This repository documents my hands-on journey learning Terraform and Infrastructure as Code (IaC). My goal is to understand how to provision, manage, and automate cloud infrastructure using reusable, maintainable, and version-controlled Terraform configurations.
 
----
+Instead of learning only the theory, I am completing practical daily challenges, documenting my work, troubleshooting errors, and sharing my progress with the DevOps community.
 
-## 🗓️ Challenge Dates
+This challenge is part of my ongoing journey toward becoming a skilled **DevOps / Cloud Engineer**.
 
-**11th October → 17th October 2026 (Sunday to Saturday)**
+## 🎯 Learning Objectives
 
-| Day | Date | Topic |
-|-----|------|-------|
-| [Day 1](./day01/README.md) | Sun, 11 Oct | Introduction to IaC & Terraform Basics |
-| [Day 2](./day02/README.md) | Mon, 12 Oct | HCL Deep Dive — Variables, Types & Expressions |
-| [Day 3](./day03/README.md) | Tue, 13 Oct | Providers, Resources & Your First Cloud Infra |
-| [Day 4](./day04/README.md) | Wed, 14 Oct | Terraform State & Remote Backends (Native Locking) |
-| [Day 5](./day05/README.md) | Thu, 15 Oct | Modules — Reusable, Composable Infrastructure |
-| [Day 6](./day06/README.md) | Fri, 16 Oct | Advanced Terraform + Capstone Project |
-| [Day 7](./day07/README.md) | Sat, 17 Oct | 🏁 Wrap Up & Review |
+- Understand Infrastructure as Code (IaC).
+- Learn Terraform syntax, providers, resources, and data sources.
+- Provision AWS infrastructure using Terraform.
+- Work with variables, outputs, and reusable modules.
+- Understand Terraform state management and remote backends.
+- Implement state locking and infrastructure drift management.
+- Build reusable infrastructure for multiple environments.
+- Provision Kubernetes infrastructure using Terraform and Amazon EKS.
+- Follow infrastructure automation and security best practices.
+- Develop practical troubleshooting and problem-solving skills.
 
----
+## 🛠️ Technologies and Tools
 
-## 🎬 Companion Code & Video
-
-This challenge pairs perfectly with Shubham's **"Terraform In One Shot"** masterclass and its full code repo. Use them as your primary reference all week:
-
-- 📺 **Video:** [Terraform In One Shot | 3 Live DevOps Projects with Notes](https://youtu.be/S9mohJI_R34)
-- 📦 **Companion Repo:** [LondheShubham153/terraform-for-devops](https://github.com/LondheShubham153/terraform-for-devops) — real AWS infra, modern-feature [`examples/`](https://github.com/LondheShubham153/terraform-for-devops/tree/main/examples) (`for_each`, `import`, `moved`, `removed`, `check`), a [multi-env module project](https://github.com/LondheShubham153/terraform-for-devops/tree/main/aws_module_project), and a production [EKS setup](https://github.com/LondheShubham153/terraform-for-devops/tree/main/eks).
-
-> 💡 Each day below links to the exact folder/file in that repo that matches the topic. Clone it alongside your challenge repo and follow along.
-
----
-
-## 🎯 What You'll Do
-
-- 🛠️ Solve a **daily Terraform challenge** with hands-on tasks and starter code.
-- ☁️ Build your **own project infrastructure** on the cloud of your choice — **AWS / Azure / GCP / Utho**.
-- 📓 **Stay consistent** — this is a self-paced practice assignment: do a little each day and keep notes on what you learn.
-- 📢 *(Optional)* **Learn in public** — share your progress and tag the community.
-- 🚀 Finish the week with a **Capstone Project** you can show off in interviews.
-
----
-
-## 📢 How to Practice
-
-1. **Fork** this repository and clone it.
-2. Each day, open that day's `README.md`, complete the tasks, and commit your code + notes to **your own repo**.
-3. Keep short notes on what you learned (screenshots, code snippets, `terraform plan` output).
-4. *(Optional)* Share your progress on LinkedIn / X with **#TrainWithShubham #TerraWeekChallenge** and tag **[@Shubham Londhe](https://www.linkedin.com/in/shubhamlondhe1996/)**.
-5. On **Day 7 (17th October)**, go through the [wrap-up checklist](./day07/README.md) to review your week.
+| Technology | Purpose |
+|---|---|
+| Terraform | Infrastructure as Code |
+| Amazon Web Services (AWS) | Cloud infrastructure |
+| HCL | Terraform configuration language |
+| Linux / Ubuntu | Command-line environment |
+| Git and GitHub | Version control and documentation |
+| Amazon S3 | Remote Terraform state storage |
+| DynamoDB | State locking in the configured S3 backend |
+| Amazon VPC | Network infrastructure |
+| Amazon EC2 | Virtual machines |
+| Amazon EKS | Managed Kubernetes |
+| Terraform Modules | Reusable infrastructure components |
 
 ---
 
-## 🧰 Prerequisites
 
-- A code editor (VS Code recommended, with the **HashiCorp Terraform** extension).
-- **Terraform ≥ 1.15** installed → [Install guide](https://developer.hashicorp.com/terraform/install)
-- A cloud account (**AWS / Azure / GCP / Utho**) + its CLI configured.
-- Basic command-line comfort and a GitHub account.
+## 🚀 Terraform Workflow
 
-> 💡 Terraform is free and open-source. Stay within your cloud's **free tier** and always run `terraform destroy` after each task to avoid surprise bills.
+The following commands are part of my regular Terraform workflow.
 
----
+### 1. Initialize Terraform
 
-## 📚 Learning Resources
+```bash
+terraform init
+```
 
-- **🎥 Terraform In One Shot (companion video):** [youtu.be/S9mohJI_R34](https://youtu.be/S9mohJI_R34)
-- **💻 Companion code repo:** [terraform-for-devops](https://github.com/LondheShubham153/terraform-for-devops)
-- **Official Docs:** [developer.hashicorp.com/terraform](https://developer.hashicorp.com/terraform)
-- **Terraform Registry (providers & modules):** [registry.terraform.io](https://registry.terraform.io/)
-- **Terraform Tutorials:** [developer.hashicorp.com/terraform/tutorials](https://developer.hashicorp.com/terraform/tutorials)
-- **TWS YouTube:** [youtube.com/@TrainWithShubham](https://www.youtube.com/@TrainWithShubham)
+Downloads the required providers and initializes the working directory.
 
----
+### 2. Validate Configuration
 
-## 🤝 Contribute
+```bash
+terraform validate
+```
 
-Found a typo, a better example, or want to add a bonus task? Open a **Pull Request** — this repo is built by the community, for the community. ❤️
+Checks whether the Terraform configuration is syntactically valid and internally consistent.
 
----
+### 3. Format Configuration
 
-## 🌐 Join the Community
+```bash
+terraform fmt -recursive
+```
 
-- 💬 **Telegram:** [t.me/trainwithshubham](https://t.me/trainwithshubham)
-- 🎮 **Discord:** [discord.gg/hs3Pmc5F](https://discord.gg/hs3Pmc5F)
-- 📱 **WhatsApp:** [Join Group](https://chat.whatsapp.com/FvRlAAZVxUhCUSZ0Y1s7KY)
-- ▶️ **YouTube:** [@TrainWithShubham](https://www.youtube.com/@TrainWithShubham)
-- 🌍 **Website:** [trainwithshubham.com](https://www.trainwithshubham.com/)
-- 💼 **LinkedIn:** [Shubham Londhe](https://www.linkedin.com/in/shubhamlondhe1996/)
+Formats Terraform files consistently.
+
+### 4. Preview Infrastructure Changes
+
+```bash
+terraform plan
+```
+
+Shows the proposed changes before they are applied.
+
+### 5. Provision Infrastructure
+
+```bash
+terraform apply
+```
+
+Creates or updates infrastructure according to the Terraform configuration after approval.
+
+### 6. Inspect State
+
+```bash
+terraform state list
+terraform show
+```
+
+Displays resources tracked in the current Terraform state.
+
+### 7. Destroy Test Infrastructure
+
+```bash
+terraform destroy
+```
+
+Destroys resources managed by the configuration after confirmation. I use this carefully for temporary learning environments to avoid unnecessary AWS costs.
+
+## 🗂️ Key Concepts I Am Practicing
+
+### Terraform Fundamentals
+- Providers and resources
+- Variables and outputs
+- Data sources
+- Resource dependencies
+- Meta-arguments
+
+### State Management
+- Local and remote state
+- S3 backend configuration
+- State locking
+- Resource import
+- State migration and recovery
+- State drift detection and reconciliation
+
+### Reusable Infrastructure
+- Custom Terraform modules
+- Terraform Registry modules
+- Input variables and outputs
+- Terraform workspaces
+- Environment-specific configurations
+
+### Cloud and Kubernetes
+- AWS networking with VPCs and subnets
+- EC2 instance provisioning
+- Security groups and routing
+- Amazon EKS cluster provisioning
+- Infrastructure automation
+
+## 🔐 Security and Best Practices
+
+I aim to follow these practices throughout the challenge:
+
+- Never commit AWS access keys, passwords, private keys, or sensitive Terraform state.
+- Use IAM roles and least-privilege permissions where practical.
+- Add `.terraform/` and local state files to `.gitignore`.
+- Review `terraform plan` before applying changes.
+- Enable remote-state versioning and configure locking where supported.
+- Keep reusable infrastructure organized into modules.
+- Pin provider versions appropriately and commit `.terraform.lock.hcl`.
+- Clean up temporary AWS resources to avoid unexpected charges.
+- Treat Terraform state as sensitive because it may contain confidential infrastructure data.
+
+Example `.gitignore`:
+
+```gitignore
+# Terraform working directory
+**/.terraform/*
+
+# Local Terraform state
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration
+.terraformrc
+terraform.rc
+```
+
+**Note:** Commit `.terraform.lock.hcl` so provider selections remain reproducible. Do not ignore it.
+
+## 🧠 Challenges and Troubleshooting
+
+During hands-on practice, I document errors and their solutions, including:
+
+- Terraform initialization and provider errors
+- AWS IAM permission issues
+- Backend configuration and state migration problems
+- State locking and resource import errors
+- Resource dependency and configuration mismatches
+- Terraform module and variable errors
+- AWS infrastructure provisioning issues
+
+Each challenge helps me improve my understanding of infrastructure automation and troubleshooting.
+
+## 📸 Practical Evidence
+
+For each completed challenge, I aim to include:
+
+- Terraform configuration files
+- Important terminal commands and outputs
+- Screenshots of successful AWS resources
+- Explanation of the concepts learned
+- Errors encountered and their solutions
+- Cleanup and verification steps
+
+## 📈 My Learning Approach
+
+My approach is simple:
+
+1. Learn the concept.
+2. Write Terraform configuration.
+3. Validate and deploy the infrastructure.
+4. Troubleshoot errors.
+5. Verify the results.
+6. Document the solution.
+7. Share my learning publicly.
+
+I believe consistent hands-on practice is one of the best ways to build real-world DevOps skills.
+
+## 🙏 Acknowledgements
+
+A special thank you to **Shubham Londhe and TrainWithShubham** for the learning resources, practical challenges, and guidance throughout this DevOps journey.
+
+I am grateful to the DevOps community for sharing knowledge and encouraging continuous learning.
+
+## 🔗 Connect With Me
+
+- **GitHub:** [tejswini-maingade](https://github.com/tejswini-maingade)
+- **TerraWeek Repository:** [View My Terraform Challenges](https://github.com/tejswini-maingade/TerraWeek)
+- **LinkedIn:** [Connect With Me](https://www.linkedin.com/in/tejswini-maingade/)
+
+## 🌱 Final Thoughts
+
+This repository represents my commitment to learning Terraform, AWS, and Infrastructure as Code through consistent practical work.
+
+Every challenge is an opportunity to improve my skills, understand cloud infrastructure more deeply, and become better prepared for real-world DevOps and Cloud Engineering roles.
+
+**Learn. Build. Break. Fix. Document. Repeat.**
 
 ---
 
 <p align="center">
-  <b>Learn. Apply. Build. Share.</b><br>
-  Let's Terraform the world, one <code>apply</code> at a time. 🚀<br><br>
-  <b>#TrainWithShubham #TerraWeekChallenge</b>
+  <strong>#TerraWeek #Terraform #AWS #DevOps #InfrastructureAsCode #TrainWithShubham</strong>
 </p>
