@@ -1,4 +1,4 @@
-# Day 64 — Terraform State Management and Remote Backends
+# Day 4 — Terraform State Management and Remote Backends
 
 **Challenge:** TerraWeek | 90DaysOfDevOps  
 **Cloud Provider:** AWS  
