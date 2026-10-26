@@ -1,8 +1,6 @@
 # Day 4 — Terraform State Management and Remote Backends
 
-**Challenge:** TerraWeek | 90DaysOfDevOps  
-**Cloud Provider:** AWS  
-**Region:** ap-south-1
+---
 
 ## 1. Objective
 
